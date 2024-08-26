@@ -3,17 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/http/server.ts"
   },
   "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@prisma/client": "^5.18.0",
     "@sass/api": "file:",
-    "@sass/auth": "*"
+    "@sass/auth": "*",
+    "fastify": "^4.28.1",
+    "fastify-type-provider-zod": "^2.0.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@saas/eslint-config": "*",
     "@saas/prettier": "*",
     "@saas/tsconfig": "*",
     "@types/node": "^22.4.1",
+    "prisma": "^5.18.0",
     "tsx": "^4.17.0"
   },
   "eslintConfig": {
