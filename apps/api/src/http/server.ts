@@ -14,14 +14,18 @@ import { errorHandler } from './error-handler'
 import { authenticateWithPassword } from './routes/auth/authenticate-with-password'
 import { createAccount } from './routes/auth/create-account'
 import { getProfile } from './routes/auth/get-profile'
+import { requestPasswordRecover } from './routes/auth/request-password-recover'
+import { resetPassword } from './routes/auth/reset-password'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.setSerializerCompiler(serializerCompiler)
 app.setValidatorCompiler(validatorCompiler)
 
+// Error Middleware/handler
 app.setErrorHandler(errorHandler)
 
+// Swagger
 app.register(fastifySwagger, {
   openapi: {
     info: {
@@ -38,15 +42,20 @@ app.register(fastifySwaggerUI, {
   routePrefix: '/docs',
 })
 
+// JWT
 app.register(fastifyJwt, {
   secret: 'my-jwt-secret',
 })
 
+// CORS
 app.register(fastifyCors)
 
+// Routes
 app.register(createAccount)
 app.register(authenticateWithPassword)
 app.register(getProfile)
+app.register(requestPasswordRecover)
+app.register(resetPassword)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('HTTP Server running!')
