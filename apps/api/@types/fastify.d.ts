@@ -11,4 +11,4 @@ declare module 'fastify' {
 }
 
 // Nesse arquivo estamos extendendo a interface FastifyRequest
-// para que possamos adicionar a ela uma nova funcao chamada getCurrentUserId
+// para que possamos adicionar a ela novas funcoes
