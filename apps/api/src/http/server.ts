@@ -25,6 +25,8 @@ import { getOrganizations } from './routes/orgs/get-organizations'
 import { shutdownOrganization } from './routes/orgs/shutdown-organization'
 import { transferOrganization } from './routes/orgs/transfer-organization'
 import { updateOrganization } from './routes/orgs/update-organization'
+import { createProject } from './routes/projects/create-projects'
+import { deleteProject } from './routes/projects/delete-projects'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -78,7 +80,7 @@ app.register(getProfile)
 app.register(requestPasswordRecover)
 app.register(resetPassword)
 
-// Organization
+// Organizations
 app.register(createOrganization)
 app.register(getMembership)
 app.register(getOrganization)
@@ -86,6 +88,10 @@ app.register(getOrganizations)
 app.register(updateOrganization)
 app.register(shutdownOrganization)
 app.register(transferOrganization)
+
+// Projects
+app.register(createProject)
+app.register(deleteProject)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log('HTTP Server running!')
