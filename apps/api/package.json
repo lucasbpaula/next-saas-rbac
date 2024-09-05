@@ -16,6 +16,7 @@
     "@prisma/client": "^5.18.0",
     "@sass/api": "file:",
     "@sass/auth": "*",
+    "@saas/env": "*",
     "bcryptjs": "^2.4.3",
     "fastify": "^4.28.1",
     "fastify-plugin": "^4.5.1",
@@ -24,7 +25,6 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
-    "@saas/env": "*",
     "@saas/eslint-config": "*",
     "@saas/prettier": "*",
     "@saas/tsconfig": "*",
