@@ -34,7 +34,6 @@ export async function authenticateWithPassword(app: FastifyInstance) {
 
       if (!userFromEmail) {
         throw new BadRequestError('Invalid credentials.')
-        return reply.status(400).send({ message: 'Invalid credentials.' })
       }
 
       if (userFromEmail.passwordHash === null) {
