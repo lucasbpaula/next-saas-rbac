@@ -14,7 +14,6 @@
     "@fastify/swagger": "^8.15.0",
     "@fastify/swagger-ui": "^4.1.0",
     "@prisma/client": "^5.18.0",
-    "@sass/api": "file:",
     "@sass/auth": "*",
     "@saas/env": "*",
     "bcryptjs": "^2.4.3",

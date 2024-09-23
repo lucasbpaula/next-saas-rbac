@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@saas/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
     "@saas/env": "*",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "cookies-next": "^4.2.1",
     "ky": "^1.7.2",
     "lucide-react": "^0.438.0",
     "next": "15.0.0-rc.0",
@@ -22,7 +23,6 @@
     "react-dom": "19.0.0-rc-f994737d14-20240522",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
-    "web": "file:",
     "zod": "^3.23.8"
   },
   "devDependencies": {

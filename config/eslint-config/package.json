@@ -12,9 +12,6 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "@saas/prettier": "*"
   },
-  "dependencies": {
-    "@saas/eslint-config": "file:"
-  },
   "prettier": "@saas/prettier",
   "eslintConfig": {
     "extends": [
