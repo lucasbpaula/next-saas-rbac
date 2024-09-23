@@ -15,7 +15,18 @@ const signUpSchema = z
       .email({ message: 'Please, provide a valid e-mail address.' }),
     password: z
       .string()
-      .min(6, { message: 'Password should have at least 6 characters.' }),
+      .min(6, { message: 'Password should have at least 6 characters.' })
+      .refine(
+        (data) => {
+          const format = /[ `!@#$%^&*()_+\-=\\[\]{};':"\\|,.<>\\/?~]/
+
+          return format.test(data)
+        },
+        {
+          message: 'Password must contain at least one special character.',
+          path: ['password'],
+        },
+      ),
     password_confirmation: z.string(),
   })
   .refine((data) => data.password === data.password_confirmation, {
@@ -25,7 +36,7 @@ const signUpSchema = z
 
 export async function signUpAction(formData: FormData) {
   const result = signUpSchema.safeParse(Object.fromEntries(formData))
-  console.log(result)
+
   if (!result.success) {
     const errors = result.error.flatten().fieldErrors
 

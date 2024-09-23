@@ -6,8 +6,14 @@ interface ISignUpRequest {
   password: string
 }
 
-export async function signUp({ name, email, password }: ISignUpRequest) {
-  const result = await api
+type SignUpResponse = void
+
+export async function signUp({
+  name,
+  email,
+  password,
+}: ISignUpRequest): Promise<SignUpResponse> {
+  await api
     .post('users', {
       json: {
         name,
@@ -16,6 +22,4 @@ export async function signUp({ name, email, password }: ISignUpRequest) {
       },
     })
     .json()
-
-  return result
 }
