@@ -6,6 +6,7 @@
     "dev": "npm run env:load tsx watch src/http/server.ts",
     "db:migrate": "npm run env:load npx prisma migrate dev",
     "db:studio": "npm run env:load npx prisma studio",
+    "db:seed": "npm run env:load npx prisma db seed",
     "env:load": "dotenv -e ../../.env --"
   },
   "dependencies": {
