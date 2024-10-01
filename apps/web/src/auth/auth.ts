@@ -31,8 +31,6 @@ export async function ability() {
     return null
   }
 
-  console.log(membership)
-
   const ability = defineAbilityFor({
     id: membership.userId,
     role: membership.role,
