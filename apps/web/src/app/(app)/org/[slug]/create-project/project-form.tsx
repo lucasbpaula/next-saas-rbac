@@ -10,11 +10,17 @@ import { useFormState } from '@/hooks/use-form-state'
 
 import { createProjectAction } from './actions'
 import { Textarea } from '@/components/ui/textarea'
+import { useParams } from 'next/navigation'
+import { queryClient } from '@/lib/react-query'
 
 export function ProjectForm() {
+  const { slug: org } = useParams()
+
   const [{ success, message, errors }, handleSubmit, isPending] = useFormState(
     createProjectAction,
-    () => {},
+    () => {
+      queryClient.invalidateQueries({ queryKey: [org, 'projects'] })
+    },
   )
 
   return (
