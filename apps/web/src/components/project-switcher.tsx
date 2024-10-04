@@ -80,7 +80,7 @@ export default function ProjectSwitcher() {
         className="w-[200px]"
       >
         <DropdownMenuGroup>
-          <DropdownMenuLabel>Organizations</DropdownMenuLabel>
+          <DropdownMenuLabel>Projects</DropdownMenuLabel>
 
           {data &&
             data.projects?.map((project) => (
