@@ -84,7 +84,7 @@ export default function ProjectSwitcher() {
 
           {data &&
             data.projects?.map((project) => (
-              <DropdownMenuItem asChild>
+              <DropdownMenuItem asChild key={project.id}>
                 <Link href={`/org/${orgSlug}/project/${project.slug}`}>
                   <Avatar className="mr-2 size-4">
                     {project.avatarUrl && (
