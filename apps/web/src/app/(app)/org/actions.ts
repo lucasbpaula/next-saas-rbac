@@ -7,6 +7,7 @@ import { createOrganization } from '@/http/create-organization'
 import { getCurrentOrg } from '@/auth/auth'
 import { updateOrganization } from '@/http/update-organization'
 import { revalidateTag } from 'next/cache'
+import { getBilling } from '@/http/get-billing'
 
 const organizationSchema = z
   .object({
