@@ -8,4 +8,6 @@ export async function shutdownOrganization({
   org,
 }: ShutdownOrganizationRequest) {
   const result = await api.delete(`organizations/${org}`)
+
+  return result
 }
