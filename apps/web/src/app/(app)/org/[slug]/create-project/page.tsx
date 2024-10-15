@@ -1,5 +1,3 @@
-import { Header } from '@/components/header'
-
 import { ProjectForm } from './project-form'
 import { ability } from '@/auth/auth'
 import { redirect } from 'next/navigation'
