@@ -8,8 +8,8 @@ import { getOrganization } from '@/http/get-organization'
 import { organizationSchema } from '@sass/auth'
 import { ArrowLeftRight, Crown } from 'lucide-react'
 import Image from 'next/image'
-import { RemoveMemberButton } from './remove-button'
 import { UpdateMemberRoleSelect } from './update-member-role-select'
+import { RemoveMemberButton } from './remove-member-button'
 
 export async function MemberList() {
   const currentOrg = await getCurrentOrg()
