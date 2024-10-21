@@ -9,7 +9,7 @@ import { ProfileButton } from './profile-button'
 import ProjectSwitcher from './project-switcher'
 import { ThemeSwitcher } from './theme/theme-switcher'
 import { Separator } from './ui/separator'
-import { PendingInvites } from './pending-invites'
+import { PendingInvites } from './pending-invites/pending-invites'
 
 export async function Header() {
   const permissions = await ability()

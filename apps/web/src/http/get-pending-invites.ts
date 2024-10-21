@@ -19,7 +19,7 @@ interface GetPendingInvitesResponse {
 
 export async function getPendingInvites() {
   const result = await api
-    .get(`pending-invites`)
+    .get(`pending-invites`, { next: { tags: ['pending-invites'] } })
     .json<GetPendingInvitesResponse>()
 
   return result
