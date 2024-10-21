@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run env:load tsx watch src/http/server.ts",
-    "db:migrate": "npm run env:load npx prisma migrate dev",
-    "db:studio": "npm run env:load npx prisma studio",
-    "db:seed": "npm run env:load npx prisma db seed",
+    "dev": "pnpm run env:load tsx watch src/http/server.ts",
+    "db:migrate": "pnpm run env:load npx prisma migrate dev",
+    "db:studio": "pnpm run env:load npx prisma studio",
+    "db:seed": "pnpm run env:load npx prisma db seed",
     "env:load": "dotenv -e ../../.env --",
     "build": "tsup",
     "start": "node dist/http/server.js"
