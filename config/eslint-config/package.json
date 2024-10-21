@@ -9,7 +9,7 @@
   ],
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
-    "@saas/prettier": "*",
+    "@saas/prettier": "workspace:*",
     "@tanstack/eslint-plugin-query": "^5.59.7",
     "eslint-plugin-simple-import-sort": "^12.1.1"
   },

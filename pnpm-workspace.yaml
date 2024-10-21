@@ -1,0 +1,5 @@
+packages:
+  # todos os pacotes em subdiretórios diretos de packages/
+  - 'apps/*'
+  - 'packages/*'
+  - 'config/*'

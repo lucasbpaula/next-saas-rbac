@@ -20,8 +20,8 @@
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
-    "@saas/env": "*",
-    "@sass/auth": "*",
+    "@saas/env": "workspace:*",
+    "@sass/auth": "workspace:*",
     "@tanstack/react-query": "^5.59.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -39,8 +39,8 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@saas/prettier": "*",
-    "@saas/tsconfig": "*",
+    "@saas/prettier": "workspace:*",
+    "@saas/tsconfig": "workspace:*",
     "@types/node": "^20",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",

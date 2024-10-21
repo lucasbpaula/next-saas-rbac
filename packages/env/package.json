@@ -5,9 +5,9 @@
   "main": "index.ts",
   "types": "index.ts",
   "devDependencies": {
-    "@saas/eslint-config": "*",
-    "@saas/prettier": "*",
-    "@saas/tsconfig": "*"
+    "@saas/eslint-config": "workspace:*",
+    "@saas/prettier": "workspace:*",
+    "@saas/tsconfig": "workspace:*"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.11.1",
