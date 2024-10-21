@@ -74,7 +74,7 @@ export function SignUpForm() {
           <Label htmlFor="password_confirmation">Confirm your password</Label>
           <Input
             name="password_confirmation"
-            type="password_confirmation"
+            type="password"
             id="password_confirmation"
           />
 
