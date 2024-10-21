@@ -13,13 +13,13 @@ export async function acceptInvite(app: FastifyInstance) {
     .withTypeProvider<ZodTypeProvider>()
     .register(auth)
     .post(
-      '/organizations/:slug:/invites/:inviteId',
+      '/invites/:inviteId/accept',
       {
         schema: {
           tags: ['invites'],
           summary: 'Accept an invite',
           security: [{ bearerAuth: [] }],
-          params: z.object({ slug: z.string(), inviteId: z.string() }),
+          params: z.object({ inviteId: z.string() }),
           response: {
             204: z.null(),
           },
