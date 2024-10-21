@@ -2,7 +2,7 @@
   "name": "next-saas-rbac",
   "private": true,
   "scripts": {
-    "build": "set NODE_ENV=production & next build",
+    "build": "turbo build",
     "dev": "turbo run dev",
     "lint": "turbo lint"
   },
