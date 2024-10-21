@@ -8,7 +8,7 @@
     "db:studio": "npm run env:load npx prisma studio",
     "db:seed": "npm run env:load npx prisma db seed",
     "env:load": "dotenv -e ../../.env --",
-    "build": "tsc",
+    "build": "tsup",
     "start": "node dist/http/server.js"
   },
   "dependencies": {
