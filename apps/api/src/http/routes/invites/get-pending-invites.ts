@@ -68,7 +68,9 @@ export async function getPendingInvites(app: FastifyInstance) {
               },
             },
             organization: {
-              name: true,
+              select: {
+                name: true,
+              },
             },
           },
           where: {
