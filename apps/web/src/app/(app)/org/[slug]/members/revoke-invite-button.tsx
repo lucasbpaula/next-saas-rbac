@@ -1,3 +1,6 @@
+import { XCircle, XOctagon } from 'lucide-react'
+import { ComponentProps } from 'react'
+
 import {
   AlertDialog,
   AlertDialogAction,
@@ -10,8 +13,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
-import { XCircle, XOctagon } from 'lucide-react'
-import { ComponentProps } from 'react'
+
 import { revokeInviteAction } from './actions'
 
 interface RevokeInviteButtonProps extends ComponentProps<typeof Button> {

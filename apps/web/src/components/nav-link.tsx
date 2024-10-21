@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { ComponentProps } from 'react'
 import { usePathname } from 'next/navigation'
+import { ComponentProps } from 'react'
 
 interface NavLinkProps extends ComponentProps<typeof Link> {}
 

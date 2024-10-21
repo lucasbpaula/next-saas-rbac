@@ -1,4 +1,5 @@
 import { Role } from '@sass/auth'
+
 import { api } from './api-client'
 
 interface UpdateMemberRequest {

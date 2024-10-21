@@ -2,6 +2,6 @@
 
 module.exports = {
   extends: ['@rocketseat/eslint-config/next'],
-  plugins: ['simple-import-sort', '@tanstack/query/recommended'],
+  plugins: ['simple-import-sort', '@tanstack/query'],
   rules: { 'simple-import-sort/imports': 'error' },
 }

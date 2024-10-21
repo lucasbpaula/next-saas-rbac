@@ -1,9 +1,9 @@
 'use server'
 
+import { revalidateTag } from 'next/cache'
+
 import { acceptInvite } from '@/http/accept-invite'
 import { rejectInvite } from '@/http/reject-invite'
-import { queryClient } from '@/lib/react-query'
-import { revalidateTag } from 'next/cache'
 
 export async function acceptInviteAction(inviteId: string) {
   await acceptInvite(inviteId)
@@ -13,5 +13,4 @@ export async function acceptInviteAction(inviteId: string) {
 
 export async function rejectInviteAction(inviteId: string) {
   await rejectInvite(inviteId)
-
 }

@@ -1,5 +1,3 @@
-import { Header } from '@/components/header'
-
 export default function Project() {
   return (
     <div className="space-y-4">

@@ -1,19 +1,21 @@
-import { Button } from '@/components/ui/button'
 import { XCircle } from 'lucide-react'
-import { getCurrentOrg } from '../../../../../auth/auth'
-import { shutdownOrganization } from '@/http/shutdown-organization'
 import { redirect } from 'next/navigation'
+
 import {
   AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogHeader,
+  AlertDialogDescription,
   AlertDialogFooter,
+  AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-  AlertDialogCancel,
-  AlertDialogAction,
-  AlertDialogDescription,
 } from '@/components/ui/alert-dialog'
+import { Button } from '@/components/ui/button'
+import { shutdownOrganization } from '@/http/shutdown-organization'
+
+import { getCurrentOrg } from '../../../../../auth/auth'
 
 export function ShutdownOrganizationButton() {
   async function shutdownOrganizationAction() {

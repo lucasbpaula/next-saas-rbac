@@ -1,6 +1,6 @@
 import { Role } from '@sass/auth'
+
 import { api } from './api-client'
-import next from 'next'
 
 interface GetMembersResponse {
   members: {

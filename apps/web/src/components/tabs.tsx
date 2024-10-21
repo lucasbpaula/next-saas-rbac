@@ -1,8 +1,7 @@
 import { ability, getCurrentOrg } from '@/auth/auth'
-import { Button } from './ui/button'
+
 import { NavLink } from './nav-link'
-import { permissions } from '../../../../packages/auth/src/permissions'
-import { permission } from 'process'
+import { Button } from './ui/button'
 
 export async function Tabs() {
   const currentOrg = await getCurrentOrg()
@@ -10,7 +9,7 @@ export async function Tabs() {
 
   const canUpdateOrganization = permissions?.can('update', 'Organization')
   const canGetBilling = permissions?.can('get', 'Billing')
-  
+
   const canGetMembers = permissions?.can('get', 'User')
   const canGetProjects = permissions?.can('get', 'Project')
 

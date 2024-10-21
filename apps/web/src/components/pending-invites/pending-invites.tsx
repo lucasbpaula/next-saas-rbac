@@ -1,13 +1,15 @@
 'use client'
 
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
-import { Button } from '../ui/button'
-import { Check, Loader2, UserPlus2, X } from 'lucide-react'
+import { useQuery } from '@tanstack/react-query'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { useQuery } from '@tanstack/react-query'
+import { Check, Loader2, UserPlus2, X } from 'lucide-react'
+import { useState } from 'react'
+
 import { getPendingInvites } from '@/http/get-pending-invites'
-import { FormEvent, useState } from 'react'
+
+import { Button } from '../ui/button'
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
 import { acceptInviteAction, rejectInviteAction } from './actions'
 
 dayjs.extend(relativeTime)
@@ -37,7 +39,11 @@ export function PendingInvites() {
     <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
         <Button size="icon" variant="ghost">
-          {isLoading ? <Loader2 className="size-4 animate-spin" /> : <UserPlus2 className="size-4" />}
+          {isLoading ? (
+            <Loader2 className="size-4 animate-spin" />
+          ) : (
+            <UserPlus2 className="size-4" />
+          )}
           <span className="sr-only">Pending invites</span>
         </Button>
       </PopoverTrigger>
@@ -47,7 +53,9 @@ export function PendingInvites() {
           Pending invites ({data?.invites.length ?? 0})
         </span>
 
-        {data?.invites.length === 0 && <p className='text-sm text-muted-foreground'>No invites found.</p>}
+        {data?.invites.length === 0 && (
+          <p className="text-sm text-muted-foreground">No invites found.</p>
+        )}
 
         {data?.invites.map((invite) => (
           <div className="space-y-2" key={invite.id}>
@@ -63,7 +71,12 @@ export function PendingInvites() {
             </p>
 
             <div className="flex gap-1">
-              <Button type="submit" size="sm" variant="outline" onClick={() => handleAcceptInvite(invite.id)} >
+              <Button
+                type="submit"
+                size="sm"
+                variant="outline"
+                onClick={() => handleAcceptInvite(invite.id)}
+              >
                 <Check className="mr-1.5 size-3" />
                 Accept
               </Button>

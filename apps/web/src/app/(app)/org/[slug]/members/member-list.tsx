@@ -1,3 +1,7 @@
+import { organizationSchema } from '@sass/auth'
+import { ArrowLeftRight, Crown } from 'lucide-react'
+import Image from 'next/image'
+
 import { ability, getCurrentOrg } from '@/auth/auth'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -5,11 +9,9 @@ import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
 import { getMembers } from '@/http/get-members'
 import { getMembership } from '@/http/get-membership'
 import { getOrganization } from '@/http/get-organization'
-import { organizationSchema } from '@sass/auth'
-import { ArrowLeftRight, Crown } from 'lucide-react'
-import Image from 'next/image'
-import { UpdateMemberRoleSelect } from './update-member-role-select'
+
 import { RemoveMemberButton } from './remove-member-button'
+import { UpdateMemberRoleSelect } from './update-member-role-select'
 
 export async function MemberList() {
   const currentOrg = await getCurrentOrg()

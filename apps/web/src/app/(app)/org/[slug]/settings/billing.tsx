@@ -1,3 +1,5 @@
+import { Separator } from '@radix-ui/react-dropdown-menu'
+
 import { getCurrentOrg } from '@/auth/auth'
 import {
   Card,
@@ -16,7 +18,6 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { getBilling } from '@/http/get-billing'
-import { Separator } from '@radix-ui/react-dropdown-menu'
 
 export async function Billing() {
   const currentOrg = getCurrentOrg()
